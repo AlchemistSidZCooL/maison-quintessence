@@ -101,7 +101,7 @@ const CaseStudyPage = () => {
               La Visión
             </h2>
             <div className="text-slate-300 font-light leading-relaxed text-base md:text-lg space-y-4">
-              {project.longDescription.split('\n').filter(p => p.trim()).map((paragraph, i) => (
+              {(project.longDescription || project.description || '').split('\n').filter(p => p.trim()).map((paragraph, i) => (
                 <p key={i}>{paragraph.trim()}</p>
               ))}
             </div>
