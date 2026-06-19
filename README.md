@@ -1,46 +1,59 @@
 # 🏛️ MAISON QUINTESSENCE
-**Brand Book & Manifiesto Estratégico**
+**Digital Boutique & Engineering | Arquitectura Digital de Alto Estatus**
 
-## 1. El Concepto (La Identidad)
-**Nombre:** Maison Quintessence (M.Q.)
-**Significado:** En la alquimia clásica, la "quintaesencia" (el Éter) es el quinto elemento, el material del que están hechas las estrellas y el alma. Representa la perfección máxima tras depurar el caos (entropía).
-**Filosofía:** "La Casa de la Quintaesencia". El lugar íntimo (el Taller/Casa del alquimista digital) donde la ingeniería de software y el arte convergen.
+![Maison Quintessence](public/favicon.svg)
 
-## 2. El Manifiesto (Para la web / About)
-> *"El código es la alquimia del siglo XXI. Como colombiano apasionado por la precisión y el diseño, fundé Maison Quintessence con una única premisa: la tecnología empresarial no tiene por qué ser fría ni genérica. Fusionando la robustez de la ingeniería de datos con la elegancia visual del lujo europeo, transmutamos problemas complejos en infraestructuras digitales impecables. No hacemos páginas web; construimos ecosistemas de baja entropía donde el arte y la física cuántica se encuentran."*
+> *"El mar digital está lleno de ruido. Nosotros construimos refugios de silencio."*
 
-## 3. Biografías para Instagram (`@maisonquintessence`)
+Maison Quintessence es el ecosistema matriz y agencia B2B fundada por **Daniel S. García**. No construimos "páginas web"; transmutamos la complejidad técnica de los negocios en ecosistemas de software de **Baja Entropía**. Diseño de alta costura, cero fricción y código implacable.
 
-**Opción A (Directa y Lujosa):**
-> 🏛 Maison Quintessence
-> 🔮 Boutique de Arquitectura Web & Diseño Premium.
-> 🇨🇴 Pasión colombiana | 🇪🇺 Elegancia europea.
-> 💻 Construimos infraestructuras robustas que se ven increíblemente bien.
-> 🔗 quintessence.studio
+---
 
-**Opción B (Más enfocada a resultados B2B):**
-> 🏛 Maison Quintessence | Tech Studio
-> ⚡️ Elevamos tu negocio con ecosistemas digitales a medida.
-> ⚛️ Ingeniería (React/Docker) + Diseño Glassmorphism.
-> 📍 Madrid / Global.
-> 📩 DM para proyectos de alto nivel.
+## 💎 Filosofía de Desarrollo: "Quiet Luxury"
+Nuestra metodología se basa en la **Ingeniería Implacable** combinada con el **Lujo Silencioso**:
+1. **Sustracción Radical:** Lo que no aporta valor directo, se elimina. Menos código, menos fallos, más elegancia.
+2. **Glassmorphism & Geometría:** Interfaces pulidas que mezclan desenfoques físicos con geometría pura, logrando una estética "Vogue" en tecnología.
+3. **Escalabilidad Oculta:** Un front-end exquisito respaldado por una arquitectura de datos que el cliente no ve, pero que sostiene su negocio.
 
-## 4. Casos de Estudio (El Portafolio B2B de Lujo)
+---
 
-La estrategia es demostrar que no eres solo un programador, sino un "Arquitecto de Soluciones" con una sensibilidad artística y analítica brutal:
+## 🎯 La Trinidad (Portafolio B2B Activo)
+El ecosistema exhibe tres casos de estudio operativos que demuestran nuestra capacidad técnica en distintos sectores:
 
-### I. The Rincón Project (Soluciones HORECA)
-*   **Concepto:** SaaS de Alta Fidelidad para Hostelería (La Carta Digital).
-*   **Demuestra:** Dominio del Diseño UI/UX (Glassmorphism), fluidez de interfaz (React, Vite) y capacidad de generar un producto que da retorno de inversión directo.
+1. **[El Rincón de Tetuán](https://elrincontetuan.com):** (HORECA) Digitalización B2B eliminando la fricción de los pedidos físicos con una experiencia móvil inferior a 1.5s de carga.
+2. **[Antología Poética](https://antologia.danisid.com/):** (Arte Editorial) UX inmersivo y diseño tipográfico de alto nivel para trasladar la intimidad del formato físico al lienzo digital.
+3. **[Eddy Castaño - Soundscapes](https://eddycamusic.netlify.app/):** (Management Musical) Electronic Press Kit (EPK) optimizado como máquina de conversión B2B para monetización directa y contratación.
 
-### II. Antología: El Poeta (Digital Art & Publishing)
-*   **Concepto:** Experiencias Inmersivas y Arte Digital (antologia.danisid.com).
-*   **Demuestra:** Sensibilidad artística, manejo premium de tipografías y capacidad para construir webs que emocionan (altamente valorado por marcas de lujo, moda y hoteles boutique).
+---
 
-### III. Aura / Interactive Pedagogy (Interfaces de IA Educativas)
-*   **Concepto:** App de Guitarra AI / Proyecto TEA Nivel 1.
-*   **Demuestra:** Integración de Inteligencia Artificial profunda, lógica de datos compleja y UX centrado en la accesibilidad. Las empresas buscan esta capacidad para automatizaciones y formación.
+## 🛠️ Stack Tecnológico
+La agencia está construida sobre los pilares más robustos del desarrollo moderno:
+- **Framework:** React 18
+- **Build Tool:** Vite (Optimización de HMR y Bundle de Producción)
+- **Styling:** Tailwind CSS v4 + Utilidades de Glassmorphism
+- **Routing:** React Router v6 (Single Page Application - SPA)
+- **Animaciones:** Framer Motion (Micro-interacciones fluidas)
+- **Despliegue (CI/CD):** Netlify Automático (desde rama `main` en GitHub)
 
-### IV. Quintessence FinTech Dashboard (Visualización de Datos)
-*   **Concepto:** Panel financiero y unificación de datos (Mi Panel Financiero).
-*   **Demuestra:** Capacidad para crear herramientas internas de grado corporativo, seguras, oscuras y elegantes para la toma de decisiones.
+---
+
+## 🚀 Despliegue e Infraestructura
+Actualmente en producción. Integración continua (CI/CD) habilitada mediante GitHub hacia **Netlify**.
+
+- **URL Producción:** `https://maison-quintessence.netlify.app/` *(Dominio definitivo pendiente de asignación)*
+- **Comando de Build local:** `npm run build`
+- **Comando de Dev:** `npm run dev`
+
+---
+
+## 📜 Roadmap Inmediato
+- [x] Arquitectura Base (Vite/React)
+- [x] Identidad Visual (Logo Geométrico y Glassmorphism)
+- [x] Inyección de Proyectos B2B en vivo
+- [x] Manifiesto del Alquimista (Filosofía de marca)
+- [x] Despliegue en Producción (Netlify CI/CD)
+- [ ] **Configuración de Dominio Personalizado (.studio / .com)**
+- [ ] **Sistema CRM / Contacto (Botón "Agendar Diagnóstico")**
+
+---
+*Diseñado y codificado con precisión cuántica en Madrid. © 2026 Maison Quintessence.*
