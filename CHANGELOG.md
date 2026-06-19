@@ -1,24 +1,37 @@
-# CHANGELOG: Maison Quintessence
+# Changelog - Maison Quintessence
 
-## [1.0.0] - Despliegue de Producción (Fase B2B) - Junio 2026
+Todas las actualizaciones notables de este proyecto se documentarán en este archivo.
 
-### 🚀 Lanzamiento
-- **Despliegue Exitoso:** La agencia se ha lanzado oficialmente a producción mediante integración continua (GitHub + Netlify).
-- **Dominio Público:** Transición de `localhost` a infraestructura pública en vivo (Netlify).
+## [1.0.0] - 2026-06-19
+### Lanzamiento Oficial (Fase 1: El Atelier)
 
-### 💎 Identidad y Marca (Quiet Luxury)
-- **Logotipo Geométrico:** Sustitución de logo tipográfico genérico por un Monograma SVG Geométrico puro. Diseñado con proporciones estrictas (la estructura de la 'M' y la perfección absoluta de la 'Q' circular con un corte en oro de 45 grados).
-- **Favicon Vectorial:** Sincronización del favicon (`favicon.svg`) con la nueva estética geométrica B2B.
-- **Copywriting B2B:** Refactorización extrema del texto del `Hero`. Sustitución de explicaciones largas por un claim directo de alto estatus: *"Arquitectura Digital de Alto Estatus"*.
-- **El Manifiesto del Alquimista:** Creación e integración del componente `<Philosophy />` en la página principal, estableciendo el tono de la agencia (Baja Entropía, Cero Fricción).
+#### Añadido
+*   **Arquitectura Base:** Inicialización del proyecto con Vite, React 19 y Tailwind CSS v4.
+*   **Design System:** Implementación completa del tema visual "Quiet Luxury" (OLED Black, Oro, Plata) en `src/index.css`.
+*   **Componentes Core UI:**
+    *   `Hero.jsx`: Integración del logo monograma brillante y el manifiesto de ingeniería.
+    *   `Navigation.jsx`: Barra de navegación de cristal (*glassmorphism*) reactiva al scroll con anclajes suaves.
+    *   `TrinityShowcase.jsx`: Exhibición del portafolio comercial conectado dinámicamente a la data (`projects.js`).
+    *   `Footer.jsx`: Cierre minimalista y enlaces al ecosistema dual.
 
-### 🛠️ Casos de Estudio (La Trinidad)
-- **Inyección de Casos Reales:** Reemplazo de data *placeholder* por los proyectos en producción reales.
-- **Automatización de Capturas:** Uso de agente web para realizar capturas de pantalla de los sitios en vivo (El Rincón de Tetuán, Eddy Castaño y Antología).
-- **Consolidación:** Eddy Castaño integrado formalmente como un caso de éxito B2B (Landing Page y Monetización) de Maison Quintessence.
+#### Modificado (Decisiones Arquitectónicas de Última Hora)
+*   **Refactorización de Enrutamiento:** Se optimizó el componente `TrinityShowcase` para usar enlaces externos directos (`<a href>`) hacia los despliegues en producción (ej. El Rincón) en lugar de un enrutador interno (`<Link>`). Esto reduce la fricción del usuario B2B y demuestra el producto final inmediatamente.
+*   **Separación de Conceptos:** Todo el contenido biográfico y narrativo se migró al proyecto paralelo `DaniSid_Personal` (`danisid.com`), dejando a Maison Quintessence como una interfaz puramente comercial y objetiva.
 
-### ⚙️ SEO y Arquitectura
-- **Metadatos OpenGraph:** Inyección de `title`, `description` y etiquetas sociales en `index.html` para asegurar previsualizaciones premium al compartir enlaces en WhatsApp o redes profesionales.
-- **Enrutamiento SPA:** Generación del archivo `public/_redirects` requerido por Netlify para evitar errores 404 en la navegación de React Router.
-- **UX "Cero Fricción":** Eliminación de páginas intermedias. Las tarjetas de la página principal (Trinidad) ahora apuntan *directamente* a las URLs de producción de los clientes para acelerar la conversión comercial.
-- **Bug Fix Crítico:** Resolución de crasheo (Pantallazo Negro) por error de variable undefined en el componente de Casos de Estudio.
+#### Despliegue
+*   Preparación exitosa del entorno de producción (`dist`) para su despliegue mediante CI/CD en Netlify.
+
+## [1.1.0] - 2026-06-19
+### Incorporación de Caso de Estudio B2B: Eddy Soundscapes (EPK)
+
+#### Añadido
+*   **Nuevo Producto Escalable (EPK Premium):** Desarrollo, refactorización y despliegue del portafolio digital para el cantautor Eddy Castaño (`eddycamusic.netlify.app`).
+*   **Estrategia de Conversión:** Implementación de embudo directo para *Booking* vía WhatsApp B2B y arquitectura preparada para monetización ("La Gorra Digital").
+*   **Diseño de Identidad:** Extracción y aplicación del concepto "Stage Lighting Luxury" (Glassmorphism, Dark Mode, Acentos Ámbar) validando la capacidad de la agencia para hacer *Design Engineering* musical.
+*   **Documentación:** Generación del informe corporativo `CASO_DE_ESTUDIO_EDDY_SOUNDSCAPES.md` para ser utilizado como *pitch* de ventas a futuros clientes de la industria.
+
+## [1.1.1] - 2026-06-19
+### Documentación Estratégica
+
+#### Añadido
+*   **Filosofía e Historia:** Creación del documento `FILOSOFIA_MAISON_QUINTESSENCE.md` que consolida la visión ("Quiet Luxury"), la historia, la evolución de la marca y la estrategia del ecosistema dual.
