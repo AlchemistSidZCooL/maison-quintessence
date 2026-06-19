@@ -33,7 +33,7 @@ export const projects = [
       { metric: "100%", label: "Inmersión Lectora" },
       { metric: "Fluido", label: "Rendimiento Visual" }
     ],
-    liveUrl: "https://antologia.danisid.com",
+    liveUrl: "https://antologia.danisid.com/",
     year: "2026",
     techStack: ["React", "Tailwind CSS", "Framer Motion", "Typography", "Editorial Design"]
   },
@@ -52,7 +52,7 @@ export const projects = [
       { metric: "Activo", label: "Streams Orgánicos" },
       { metric: "Global", label: "Alcance" }
     ],
-    liveUrl: "https://eddycastano.netlify.app",
+    liveUrl: "https://eddycamusic.netlify.app",
     year: "2026",
     techStack: ["React", "Tailwind CSS", "Media Integration", "Conversion UX"]
   }
