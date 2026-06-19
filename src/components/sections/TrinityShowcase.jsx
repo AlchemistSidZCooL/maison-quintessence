@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { projects } from '../../data/projects';
 
 /**
@@ -20,7 +19,7 @@ const TrinityShowcase = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <Link to={`/caso/${project.slug}`} key={project.id}>
+          <a href={project.liveUrl} target="_blank" rel="noreferrer" key={project.id}>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -50,14 +49,14 @@ const TrinityShowcase = () => {
 
                 {/* Indicador visual de "Ver caso" */}
                 <div className="flex items-center gap-2 text-xs font-mono text-slate-600 group-hover:text-mq-gold transition-colors tracking-widest uppercase">
-                  <span>Ver caso de estudio</span>
+                  <span>Visitar Proyecto</span>
                   <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </div>
               </div>
             </motion.div>
-          </Link>
+          </a>
         ))}
       </div>
     </section>
