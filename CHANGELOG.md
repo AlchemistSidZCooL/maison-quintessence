@@ -20,3 +20,5 @@
 ### ⚙️ SEO y Arquitectura
 - **Metadatos OpenGraph:** Inyección de `title`, `description` y etiquetas sociales en `index.html` para asegurar previsualizaciones premium al compartir enlaces en WhatsApp o redes profesionales.
 - **Enrutamiento SPA:** Generación del archivo `public/_redirects` requerido por Netlify para evitar errores 404 en la navegación de React Router.
+- **UX "Cero Fricción":** Eliminación de páginas intermedias. Las tarjetas de la página principal (Trinidad) ahora apuntan *directamente* a las URLs de producción de los clientes para acelerar la conversión comercial.
+- **Bug Fix Crítico:** Resolución de crasheo (Pantallazo Negro) por error de variable undefined en el componente de Casos de Estudio.
