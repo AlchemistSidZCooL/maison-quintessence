@@ -1,24 +1,22 @@
-# Changelog - Maison Quintessence
+# CHANGELOG: Maison Quintessence
 
-Todos los cambios notables en la evolución corporativa y técnica de Maison Quintessence serán documentados en este archivo.
+## [1.0.0] - Despliegue de Producción (Fase B2B) - Junio 2026
 
-## [0.1.0] - Fundación de la Maison y Concepto Core - 2026-06-18
+### 🚀 Lanzamiento
+- **Despliegue Exitoso:** La agencia se ha lanzado oficialmente a producción mediante integración continua (GitHub + Netlify).
+- **Dominio Público:** Transición de `localhost` a infraestructura pública en vivo (Netlify).
 
-### Añadido
-- **Nacimiento de la Entidad:** Transición oficial de marca personal (Freelance) a Agencia Boutique Tecnológica (Maison Quintessence).
-- **Identidad Filosófica:** Establecimiento del manifiesto de marca: *"El código es la alquimia del siglo XXI"*. Fusión de ingeniería de datos y lujo europeo.
-- **Arquitectura Base (Frontend):** Inicialización del repositorio base (`React` + `Vite`) para la landing page principal de la empresa.
-- **Desarrollo de Interfaz Premium:** Construcción del motor visual basado en estética oscura y *Glassmorphism* (componentes `Hero.jsx`, `GlassCard.jsx`, `Navigation.jsx`, `Footer.jsx`).
-- **Estructuración de "The Trinity":** Categorización de los servicios en tres pilares fundamentales: *Engineering* (Infraestructura), *Design* (UI/UX) y *Alchemy* (Datos/Backend).
-- **Documentación Centralizada:** Creación del `README.md` conceptual y de este `CHANGELOG.md` para mantener trazabilidad histórica del avance.
+### 💎 Identidad y Marca (Quiet Luxury)
+- **Logotipo Geométrico:** Sustitución de logo tipográfico genérico por un Monograma SVG Geométrico puro. Diseñado con proporciones estrictas (la estructura de la 'M' y la perfección absoluta de la 'Q' circular con un corte en oro de 45 grados).
+- **Favicon Vectorial:** Sincronización del favicon (`favicon.svg`) con la nueva estética geométrica B2B.
+- **Copywriting B2B:** Refactorización extrema del texto del `Hero`. Sustitución de explicaciones largas por un claim directo de alto estatus: *"Arquitectura Digital de Alto Estatus"*.
+- **El Manifiesto del Alquimista:** Creación e integración del componente `<Philosophy />` en la página principal, estableciendo el tono de la agencia (Baja Entropía, Cero Fricción).
 
-### Migración (En curso)
-- Planificación de la migración de los activos previos (imágenes de la Carta Digital, reportes de infraestructura de Manicomio Tattoo, y scripts de Quimera) hacia el directorio de la Maison para figurar en la sección `Cases`.
+### 🛠️ Casos de Estudio (La Trinidad)
+- **Inyección de Casos Reales:** Reemplazo de data *placeholder* por los proyectos en producción reales.
+- **Automatización de Capturas:** Uso de agente web para realizar capturas de pantalla de los sitios en vivo (El Rincón de Tetuán, Eddy Castaño y Antología).
+- **Consolidación:** Eddy Castaño integrado formalmente como un caso de éxito B2B (Landing Page y Monetización) de Maison Quintessence.
 
-## [0.2.0] - Caso de Estudio B2B: Eddy Soundscapes (EPK) - 2026-06-19
-
-### Añadido (Estrategia B2B y Portafolio)
-- **Nuevo Producto Escalable (EPK Premium):** Desarrollo y despliegue exitoso del portafolio digital para el cantautor Eddy Castaño (`eddycamusic.netlify.app`). Este proyecto valida la capacidad de la agencia para transformar necesidades artísticas genéricas en productos B2B de alto valor comercial.
-- **Documentación del Caso de Estudio:** Creación del informe `CASO_DE_ESTUDIO_EDDY_SOUNDSCAPES.md` para uso comercial. Sirve como prueba tangible de la fusión entre *Design Engineering* (identidad visual "Stage Lighting Luxury") y *Arquitectura de Software* (React 18 + Vite).
-- **Resolución de Problema Base:** Se solucionó el problema de "falta de profesionalización digital en el sector musical indie", creando un embudo de conversión directo (Booking vía WhatsApp) y sentando las bases para monetización autónoma (La Gorra Digital).
-- **Proceso Creativo como Argumento de Venta:** Se documentó cómo se extrajeron los conceptos cromáticos y textuales de la obra en bruto del cliente para estructurar un *pitch* de ventas (A&R level) que ahora la agencia puede replicar para futuros artistas o marcas personales de lujo.
+### ⚙️ SEO y Arquitectura
+- **Metadatos OpenGraph:** Inyección de `title`, `description` y etiquetas sociales en `index.html` para asegurar previsualizaciones premium al compartir enlaces en WhatsApp o redes profesionales.
+- **Enrutamiento SPA:** Generación del archivo `public/_redirects` requerido por Netlify para evitar errores 404 en la navegación de React Router.
