@@ -22,3 +22,16 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Documentos internos (el repo es público): se quedan solo en local
+FILOSOFIA_MAISON_QUINTESSENCE.md
+ESTANDAR_ESTRUCTURA_LUXURY.md
+MAISON_QUINTESSENCE_MANUAL.md
+informe_portafolio_servicios.md
+PROMPT_REFACTOR_MQ.md
+TAREAS_PENDIENTES.md
+
+# Material de marca antiguo o de trabajo (imágenes de IA, banners)
+Assets_Branding/*
+!Assets_Branding/logo/
+!Assets_Branding/og/
