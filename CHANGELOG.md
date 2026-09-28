@@ -75,3 +75,17 @@ Todas las actualizaciones notables de este proyecto se documentarán en este arc
 *   Google Analytics con el ID de danisid.com (`G-MHT141WKZZ`), a la espera de un ID propio para MQ.
 *   Páginas `/caso/:slug` (no se enlazaban y fallaban al renderizar), `react-router-dom` y `lucide-react`.
 *   Assets sin uso de `public/` (teasers y anuncio generados por IA, PNG del logo, capturas antiguas): se mueven a `Assets_Branding/legacy/`. `public/` pasa de ~5,6 MB a ~220 KB.
+
+## [2.0.0-beta.2] - 2026-09-28
+### Publicación en `main` y limpieza del repositorio
+
+#### Modificado
+*   **Versión 2 en `main`:** la refactorización se integra en la rama principal y se sube a GitHub. Se elimina la rama `refactor/v2-quiet-luxury`: a partir de ahora se trabaja directamente en `main`.
+*   **Conexión con GitHub por SSH:** el remoto deja de llevar un token escrito en la URL (el antiguo ya no era válido). Los push se hacen con la cuenta DSidCode, añadida como colaboradora del repositorio.
+
+#### Eliminado (del repositorio, no del equipo)
+*   **Documentos internos:** como el repositorio es público, la filosofía, el manual, el estándar de estructura, el informe de servicios, el prompt de refactorización y las tareas pendientes dejan de subirse y pasan a `.gitignore`. Siguen en la carpeta local.
+*   **Material de marca antiguo:** imágenes generadas por IA y banners de `Assets_Branding/` (solo se suben `logo/` y `og/`).
+
+#### Corregido
+*   **Servidor local atascado:** Vite se quedaba con un error tras el cambio de rama; se reinicia y la web carga sin errores en escritorio y en móvil.
