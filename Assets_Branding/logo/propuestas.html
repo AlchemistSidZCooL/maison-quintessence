@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logo MQ · Propuestas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0A0A0A; --surface:#0F0E0D; --gold:#D4AF37; --ivory:#F4F0EB; --muted:#8C8273; --line:rgba(212,175,55,.2); }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--ivory); font-family:Outfit, sans-serif; font-weight:300; padding:48px 24px; }
+  h1 { font-weight:200; letter-spacing:.3em; text-transform:uppercase; font-size:22px; margin-bottom:8px; }
+  .note { color:var(--muted); font-size:14px; margin-bottom:40px; max-width:720px; line-height:1.6; }
+  .row { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px; }
+  .card { background:var(--surface); border:1px solid var(--line); padding:32px; display:flex; flex-direction:column; gap:28px; }
+  .tag { font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:.2em; color:var(--gold); text-transform:uppercase; }
+  .big { height:200px; display:flex; align-items:center; justify-content:center; }
+  .big img { height:180px; }
+  .variants { display:flex; align-items:center; gap:20px; border-top:1px solid var(--line); padding-top:24px; }
+  .ink-ivory { filter: brightness(0) invert(95%) sepia(6%) saturate(250%); }
+  .light { background:var(--ivory); padding:8px; }
+  .ink-black { filter: brightness(0); }
+  .lockup { display:flex; align-items:center; gap:14px; border-top:1px solid var(--line); padding-top:24px; }
+  .lockup img { height:44px; }
+  .lockup span { font-weight:200; letter-spacing:.32em; font-size:14px; text-transform:uppercase; white-space:nowrap; }
+  .desc { color:var(--muted); font-size:14px; line-height:1.6; }
+</style>
+</head>
+<body>
+  <h1>Maison Quintessence · Logo</h1>
+  <p class="note">Tres propuestas para elegir. Cada una se muestra en oro, en marfil (una sola tinta), en negro sobre claro, a 32 y 16 px y en versión horizontal. El favicon usa trazos más gruesos porque los trazos finos desaparecen a ese tamaño.</p>
+
+  <div class="row">
+    <div class="card">
+      <span class="tag">A · Inscrito</span>
+      <div class="big"><img src="A_inscrito.svg" alt="Propuesta A"></div>
+      <p class="desc">Una M de alto contraste (trazos gruesos y finos, como una tipografía Didot) dentro de la Q. La cola de la Q sale del círculo en un trazo que se afina. Es la más clásica, con aire de casa de moda.</p>
+      <div class="variants">
+        <img src="A_inscrito.svg" height="56" alt="">
+        <img src="A_inscrito.svg" height="56" class="ink-ivory" alt="">
+        <span class="light"><img src="A_inscrito.svg" height="40" class="ink-black" alt=""></span>
+        <img src="favicon.svg" height="32" alt=""><img src="favicon.svg" height="16" alt="">
+      </div>
+      <div class="lockup"><img src="A_inscrito.svg" alt=""><span>Maison Quintessence</span></div>
+    </div>
+
+    <div class="card">
+      <span class="tag">B · Sello</span>
+      <div class="big"><img src="B_sello.svg" alt="Propuesta B"></div>
+      <p class="desc">El monograma A rodeado por dos anillos, con el nombre escrito alrededor. Sirve para usos grandes (sello, redes, packaging). En tamaños pequeños se usaría el monograma A solo.</p>
+      <div class="variants">
+        <img src="B_sello.svg" height="64" alt="">
+        <img src="B_sello.svg" height="64" class="ink-ivory" alt="">
+        <span class="light"><img src="B_sello.svg" height="48" class="ink-black" alt=""></span>
+        <img src="favicon.svg" height="32" alt=""><img src="favicon.svg" height="16" alt="">
+      </div>
+      <div class="lockup"><img src="B_sello.svg" alt=""><span>Maison Quintessence</span></div>
+    </div>
+
+    <div class="card">
+      <span class="tag">C · Línea</span>
+      <div class="big"><img src="C_linea.svg" alt="Propuesta C"></div>
+      <p class="desc">M y Q enlazadas con un solo trazo fino. La cola de la Q se alarga y hace de línea base bajo la M, como una firma. Es la más arquitectónica y la más cercana al logo actual.</p>
+      <div class="variants">
+        <img src="C_linea.svg" height="48" alt="">
+        <img src="C_linea.svg" height="48" class="ink-ivory" alt="">
+        <span class="light"><img src="C_linea.svg" height="36" class="ink-black" alt=""></span>
+        <img src="favicon.svg" height="32" alt=""><img src="favicon.svg" height="16" alt="">
+      </div>
+      <div class="lockup"><img src="C_linea.svg" alt=""><span>Maison Quintessence</span></div>
+    </div>
+  </div>
+</body>
+</html>

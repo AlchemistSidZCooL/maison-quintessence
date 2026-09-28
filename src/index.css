@@ -1,36 +1,70 @@
 @import "tailwindcss";
 
+/* Paleta y tipografías compartidas con danisid.com (Quiet Luxury) */
 @theme {
-  --color-mq-black: #050505;
+  --color-mq-bg: #0A0A0A;
+  --color-mq-surface: #0F0E0D;
   --color-mq-gold: #D4AF37;
-  --color-mq-silver: #E5E4E2;
-  
-  /* Fonts */
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --color-mq-ivory: #F4F0EB;
+  --color-mq-muted: #8C8273;
+  --color-mq-line: rgba(212, 175, 55, 0.2);
+
+  --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-grotesk: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
   body {
-    background-color: var(--color-mq-black);
-    color: #F8FAFC;
+    background-color: var(--color-mq-bg);
+    color: var(--color-mq-ivory);
     font-family: var(--font-sans);
+    font-weight: 300;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: rgba(212, 175, 55, 0.3);
+  }
+
+  /* Foco visible solo con teclado */
+  :focus-visible {
+    outline: 1px solid var(--color-mq-gold);
+    outline-offset: 4px;
   }
 }
 
 @layer utilities {
-  .glass-card {
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+  /* Filete dorado fino */
+  .rule-gold {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.6), transparent);
   }
-  
-  .glass-panel {
-    background: rgba(5, 5, 5, 0.7);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-mq-gold);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }

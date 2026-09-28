@@ -1,27 +1,39 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import MainLayout from './pages/MainLayout';
-import HomePage from './pages/HomePage';
-import CaseStudyPage from './pages/CaseStudyPage';
+import { MotionConfig } from 'framer-motion';
+import Navigation from './components/layout/Navigation';
+import Footer from './components/layout/Footer';
+import WhatsAppFloat from './components/ui/WhatsAppFloat';
+import Hero from './components/sections/Hero';
+import Services from './components/sections/Services';
+import Work from './components/sections/Work';
+import Process from './components/sections/Process';
+import Architect from './components/sections/Architect';
+import Contact from './components/sections/Contact';
 
 /**
- * App.jsx — El enrutador central de Maison Quintessence.
- * 
- * Estructura:
- * - "/" → MainLayout (fondo, nav, footer) > HomePage (Hero + Portafolio)
- * - "/caso/:slug" → MainLayout > CaseStudyPage (detalle del proyecto)
- * 
- * MainLayout envuelve todas las rutas para compartir el fondo,
- * la navegación y el footer sin re-renderizarlos.
+ * Maison Quintessence: una sola página.
+ * MotionConfig respeta prefers-reduced-motion en todas las animaciones.
  */
 function App() {
   return (
-    <Routes>
-      <Route element={<MainLayout />}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/caso/:slug" element={<CaseStudyPage />} />
-      </Route>
-    </Routes>
+    <MotionConfig reducedMotion="user">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-mq-surface focus:px-4 focus:py-3 focus:text-mq-ivory"
+      >
+        Saltar al contenido
+      </a>
+      <Navigation />
+      <main id="main">
+        <Hero />
+        <Services />
+        <Work />
+        <Process />
+        <Architect />
+        <Contact />
+      </main>
+      <Footer />
+      <WhatsAppFloat />
+    </MotionConfig>
   );
 }
 

@@ -1,44 +1,67 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import Logo from '../ui/Logo';
+import { LogoMark } from '../ui/Logo';
+import { WHATSAPP_URL } from '../../lib/contact';
+import { trackContact } from '../../lib/analytics';
 
-const Hero = () => {
-  return (
-    <section id="philosophy" className="min-h-screen flex items-center justify-center pt-20 pb-12 px-4 w-full">
-      <motion.div 
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        className="glass-card px-8 py-16 md:p-20 rounded-3xl flex flex-col items-center text-center max-w-4xl w-full mx-auto shadow-2xl"
-      >
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
-          className="mb-10"
-        >
-          <Logo className="w-28 h-28 text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]" />
-        </motion.div>
+const fade = (delay) => ({
+  initial: { opacity: 0, y: 12 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 1.4, delay, ease: [0.22, 1, 0.36, 1] },
+});
 
-        <h1 className="text-2xl md:text-5xl font-light tracking-[0.25em] md:tracking-[0.3em] mb-6 text-white uppercase">
-          Maison Quintessence
-        </h1>
-        <div className="h-[1px] w-32 bg-gradient-to-r from-transparent via-mq-gold/50 to-transparent mb-8" />
-        
-        <p className="text-sm md:text-lg text-slate-400 font-light tracking-[0.2em] max-w-2xl mx-auto uppercase mb-12">
-          Arquitectura Digital de Alto Estatus
-        </p>
+const Hero = () => (
+  <section id="inicio" className="relative min-h-[100svh] flex items-center justify-center px-5 md:px-10 pt-24 pb-16 overflow-hidden">
+    {/* Halo dorado muy tenue */}
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(90vw,720px)] aspect-square rounded-full bg-[radial-gradient(circle,rgba(212,175,55,0.07),transparent_65%)]"
+    />
 
-        <div className="flex gap-6 md:gap-12 text-xs md:text-sm font-mono text-slate-500 tracking-widest uppercase opacity-80">
-          <span className="hover:text-mq-gold transition-colors cursor-default">Ingeniería</span>
-          <span>·</span>
-          <span className="hover:text-mq-gold transition-colors cursor-default">Diseño</span>
-          <span>·</span>
-          <span className="hover:text-mq-gold transition-colors cursor-default">Alquimia</span>
-        </div>
+    <div className="relative max-w-3xl mx-auto text-center flex flex-col items-center">
+      <motion.div {...fade(0.1)}>
+        <LogoMark className="w-24 h-24 md:w-32 md:h-32 text-mq-gold" title="" />
       </motion.div>
-    </section>
-  );
-};
+
+      <motion.p {...fade(0.4)} className="eyebrow mt-10">
+        Estudio de diseño e ingeniería web · Madrid
+      </motion.p>
+
+      <motion.h1
+        {...fade(0.6)}
+        className="mt-6 text-[2rem] leading-tight sm:text-5xl md:text-6xl font-extralight tracking-[0.18em] md:tracking-[0.22em] uppercase text-mq-ivory"
+      >
+        Maison Quintessence
+      </motion.h1>
+
+      <motion.div {...fade(0.8)} className="rule-gold w-40 my-8" />
+
+      <motion.p {...fade(0.9)} className="text-lg md:text-2xl font-light leading-relaxed text-mq-ivory/90 max-w-2xl">
+        Webs y experiencias digitales hechas a medida, para marcas y artistas que cuidan los detalles.
+      </motion.p>
+
+      <motion.p {...fade(1.0)} className="mt-5 text-mq-muted md:text-lg">
+        La tecnología no tiene por qué ser fría ni genérica.
+      </motion.p>
+
+      <motion.div {...fade(1.2)} className="mt-12 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => trackContact('whatsapp', 'hero')}
+          className="inline-flex items-center justify-center min-h-12 px-8 border border-mq-gold text-mq-gold font-grotesk text-sm tracking-[0.15em] uppercase hover:bg-mq-gold hover:text-mq-bg transition-colors duration-500"
+        >
+          Hablemos
+        </a>
+        <a
+          href="#trabajos"
+          className="inline-flex items-center justify-center min-h-12 px-8 border border-mq-line text-mq-ivory font-grotesk text-sm tracking-[0.15em] uppercase hover:border-mq-gold/60 transition-colors duration-500"
+        >
+          Ver trabajos
+        </a>
+      </motion.div>
+    </div>
+  </section>
+);
 
 export default Hero;

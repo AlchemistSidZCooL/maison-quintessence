@@ -1,5 +1,7 @@
 # Maison Quintessence — Digital Boutique
 
+> **Estado (2026-09-28):** la versión 2 (identidad alineada con danisid.com) está en la rama `refactor/v2-quiet-luxury`. Algunas secciones de este README describen la versión anterior y se actualizarán al cerrar la refactorización. Ver `TAREAS_PENDIENTES.md`.
+
 > *El código es la alquimia del siglo XXI. Fusionando la robustez de la ingeniería de datos con la elegancia visual del lujo europeo.*
 
 Maison Quintessence es la firma B2B premium de arquitectura de software y diseño web fundada por Daniel Sid. Este proyecto representa la fachada empresarial (El Atelier) dentro del Ecosistema Dual de marca.

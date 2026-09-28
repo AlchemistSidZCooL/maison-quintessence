@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="#D4AF37"><title>Maison Quintessence — sello</title>
+<defs><path id="arc" d="M60 60m-49 0a49 49 0 1 1 98 0a49 49 0 1 1-98 0"/></defs>
+<circle cx="60" cy="60" r="57" fill="none" stroke="#D4AF37" stroke-width=".6"/><circle cx="60" cy="60" r="42" fill="none" stroke="#D4AF37" stroke-width=".35"/>
+<text font-family="Outfit, sans-serif" font-weight="300" font-size="6.2" letter-spacing="2.6"><textPath href="#arc" startOffset="0">MAISON · QUINTESSENCE · MADRID ·</textPath></text>
+<g transform="translate(60 60) scale(.62) translate(-60 -60)"><path d="M44.6 45h1.1v30h-1.1z M44.6 45h3.5l12.6 30h-3.4z M59.3 75h1.1L75.2 45h-1.4z M73.8 45h3v30h-3z M41.2 45h7v.7h-7z M41.2 74.3h7.6v.7h-7.6z M72.6 45h7v.7h-7z M71.3 74.3h9.5v.7h-9.5z"/><path fill-rule="evenodd" d="M60 30a30 30 0 1 1 0 60a30 30 0 1 1 0-60z M60 30.9a28.2 29.1 0 1 0 0 58.2a28.2 29.1 0 1 0 0-58.2z"/><path d="M69.6 79.2C77 90 86 96.6 99 99.2v.6C84 99 74.2 93.2 67.4 80.4z"/></g>
+</svg>

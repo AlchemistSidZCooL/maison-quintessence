@@ -52,3 +52,26 @@ Todas las actualizaciones notables de este proyecto se documentarán en este arc
 #### Añadido
 *   **Inventario Maestro:** Auditoría y registro de todos los proyectos activos, en desarrollo y legacy en el ecosistema dual (Maison Quintessence y DaniSid.com).
 *   **Matriz de Distribución:** Estrategia clara para definir la ubicación de cada caso de estudio y proyecto, separando la identidad "Digital Da Vinci" (DaniSid) del portafolio comercial B2B (Maison Quintessence).
+
+## [2.0.0-beta.1] - 2026-09-28
+### Refactorización "Quiet Luxury" (primera versión, rama `refactor/v2-quiet-luxury`, sin publicar)
+
+#### Añadido
+*   **Nueva home de una sola página:** Hero (nombre y frase clara), Servicios, Trabajos seleccionados, Cómo trabajo (escuchar, diseñar, construir, verificar, publicar), El arquitecto (enlace a `danisid.com`) y Contacto.
+*   **Servicios:** los tres de danisid.com con la misma redacción (*Digital Boutique*, *Experiencias interactivas*, *Presencia para artistas*).
+*   **Trabajos:** El Rincón de Tetuán, Eddy Soundscapes, Marian Isac y Asociación Creando Sueños, con capturas reales de cada web en producción (WebP, `loading="lazy"`).
+*   **Logo vectorial:** monograma MQ "Inscrito" (M de alto contraste dentro de la Q) en `src/components/ui/Logo.jsx` y `public/brand/logo-mq.svg`, favicon simplificado para 16–32 px y tres propuestas para elegir en `Assets_Branding/logo/propuestas.html`.
+*   **SEO:** título y descripción nuevos, canonical, Open Graph y Twitter con `og-image.jpg` (1200×630, generada con código), JSON-LD `ProfessionalService` con `founder` enlazado a la `Person` de danisid.com, `robots.txt` y `sitemap.xml`.
+*   **Analítica preparada:** `src/lib/analytics.js` carga GA4 solo en el dominio de producción y solo si existe `VITE_GA_ID`; registra eventos `contact` (WhatsApp y email).
+*   **Accesibilidad:** foco visible dorado, enlace "Saltar al contenido", `prefers-reduced-motion` (CSS y `MotionConfig`), textos alternativos y objetivos táctiles de al menos 44 px.
+
+#### Modificado
+*   **Identidad visual alineada con danisid.com:** fondo `#0A0A0A`, superficie `#0F0E0D`, oro `#D4AF37`, marfil `#F4F0EB`, texto secundario `#8C8273`; tipografías Outfit, Space Grotesk y JetBrains Mono.
+*   **Menú móvil funcional** (antes el botón no hacía nada): panel a pantalla completa que se cierra con Escape o al elegir un enlace.
+*   **Botón flotante de WhatsApp** rediseñado en oro sobre negro, con mensaje ya escrito.
+*   **Textos:** se retiran superlativos y cifras no demostrables ("Alto Estatus", "100%", "1.5s", "Código Implacable").
+
+#### Eliminado
+*   Google Analytics con el ID de danisid.com (`G-MHT141WKZZ`), a la espera de un ID propio para MQ.
+*   Páginas `/caso/:slug` (no se enlazaban y fallaban al renderizar), `react-router-dom` y `lucide-react`.
+*   Assets sin uso de `public/` (teasers y anuncio generados por IA, PNG del logo, capturas antiguas): se mueven a `Assets_Branding/legacy/`. `public/` pasa de ~5,6 MB a ~220 KB.

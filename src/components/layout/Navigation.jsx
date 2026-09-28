@@ -1,69 +1,107 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
-import Logo from '../ui/Logo';
+import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { LogoLockup } from '../ui/Logo';
+
+const LINKS = [
+  { href: '#servicios', label: 'Servicios' },
+  { href: '#trabajos', label: 'Trabajos' },
+  { href: '#proceso', label: 'Cómo trabajo' },
+  { href: '#arquitecto', label: 'El arquitecto' },
+  { href: '#contacto', label: 'Contacto' },
+];
 
 /**
- * Navegación principal de Maison Quintessence.
- * 
- * Comportamiento:
- * - Transparente al inicio, se convierte en glass-panel al hacer scroll.
- * - En la Home usa anclas (#philosophy, #trinity, #contact).
- * - En páginas internas usa Link para volver a Home.
- * - El monograma MQ siempre lleva al inicio.
+ * Barra fija. En móvil, botón de 44 px que abre un menú a pantalla completa
+ * (se cierra con Escape, al elegir un enlace o al volver a pulsar el botón).
  */
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
-  const isHome = location.pathname === '/';
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => e.key === 'Escape' && setOpen(false);
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+
   return (
-    <motion.nav 
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass-panel py-4' : 'bg-transparent py-6'}`}
+    <>
+    <header
+      className={`fixed top-0 inset-x-0 z-50 transition-colors duration-500 ${
+        scrolled || open ? 'bg-mq-bg/90 backdrop-blur-md border-b border-mq-line' : 'bg-transparent border-b border-transparent'
+      }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-        {/* Logo Monograma */}
-        <Link to="/" className="flex items-center gap-3 cursor-pointer group">
-          <Logo className="w-10 h-10 text-slate-400 group-hover:text-white transition-colors" monogramOnly={true} />
-          <span className="text-white font-light tracking-[0.2em] text-sm hidden md:block">MAISON QUINTESSENCE</span>
-        </Link>
+      <nav aria-label="Principal" className="max-w-6xl mx-auto px-5 md:px-10 h-16 md:h-20 flex items-center justify-between">
+        <a href="#inicio" className="min-h-11 flex items-center" onClick={() => setOpen(false)}>
+          <LogoLockup />
+        </a>
 
-        {/* Links */}
-        <div className="hidden md:flex gap-8 text-xs font-mono tracking-widest text-slate-400 uppercase">
-          {isHome ? (
-            <>
-              <a href="#philosophy" className="hover:text-mq-gold transition-colors">Filosofía</a>
-              <a href="#trinity" className="hover:text-mq-gold transition-colors">El Portafolio</a>
-              <a href="#contact" className="hover:text-white transition-colors">Contacto</a>
-            </>
-          ) : (
-            <>
-              <Link to="/" className="hover:text-mq-gold transition-colors">Inicio</Link>
-              <Link to="/#trinity" className="hover:text-mq-gold transition-colors">El Portafolio</Link>
-              <Link to="/#contact" className="hover:text-white transition-colors">Contacto</Link>
-            </>
-          )}
-        </div>
+        <ul className="hidden lg:flex items-center gap-9 font-grotesk text-[0.8rem] tracking-[0.12em] text-mq-muted">
+          {LINKS.map((l) => (
+            <li key={l.href}>
+              <a href={l.href} className="min-h-11 inline-flex items-center hover:text-mq-ivory focus-visible:text-mq-ivory transition-colors">
+                {l.label}
+              </a>
+            </li>
+          ))}
+        </ul>
 
-        {/* Botón menú móvil */}
-        <button className="md:hidden text-slate-300 hover:text-white">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+        <button
+          type="button"
+          className="lg:hidden w-11 h-11 -mr-2 flex items-center justify-center text-mq-ivory"
+          aria-expanded={open}
+          aria-controls="menu-movil"
+          aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span className="relative block w-6 h-3" aria-hidden="true">
+            <span className={`absolute left-0 w-6 h-px bg-current transition-transform duration-300 ${open ? 'top-1.5 rotate-45' : 'top-0'}`} />
+            <span className={`absolute left-0 w-6 h-px bg-current transition-transform duration-300 ${open ? 'top-1.5 -rotate-45' : 'top-3'}`} />
+          </span>
         </button>
-      </div>
-    </motion.nav>
+      </nav>
+    </header>
+
+    {/* Fuera del <header>: su backdrop-filter haría que el menú fixed se posicionara dentro de la barra */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            id="menu-movil"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden fixed inset-x-0 top-16 md:top-20 bottom-0 z-40 bg-mq-bg"
+          >
+            <ul className="flex flex-col px-5 md:px-10 pt-6">
+              {LINKS.map((l) => (
+                <li key={l.href} className="border-b border-mq-line">
+                  <a
+                    href={l.href}
+                    onClick={() => setOpen(false)}
+                    className="flex items-center min-h-14 text-2xl font-extralight tracking-wide text-mq-ivory"
+                  >
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 
