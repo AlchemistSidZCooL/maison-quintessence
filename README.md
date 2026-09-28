@@ -1,59 +1,36 @@
-# 🏛️ MAISON QUINTESSENCE
-**Digital Boutique & Engineering | Arquitectura Digital de Alto Estatus**
+# Maison Quintessence — Digital Boutique
 
-![Maison Quintessence](public/favicon.svg)
+> *El código es la alquimia del siglo XXI. Fusionando la robustez de la ingeniería de datos con la elegancia visual del lujo europeo.*
 
-> *"El mar digital está lleno de ruido. Nosotros construimos refugios de silencio."*
+Maison Quintessence es la firma B2B premium de arquitectura de software y diseño web fundada por Daniel Sid. Este proyecto representa la fachada empresarial (El Atelier) dentro del Ecosistema Dual de marca.
 
-Maison Quintessence es el ecosistema matriz y agencia B2B fundada por **Daniel S. García**. No construimos "páginas web"; transmutamos la complejidad técnica de los negocios en ecosistemas de software de **Baja Entropía**. Diseño de alta costura, cero fricción y código implacable.
-
----
-
-## 💎 Filosofía de Desarrollo: "Quiet Luxury"
-Nuestra metodología se basa en la **Ingeniería Implacable** combinada con el **Lujo Silencioso**:
-1. **Sustracción Radical:** Lo que no aporta valor directo, se elimina. Menos código, menos fallos, más elegancia.
-2. **Glassmorphism & Geometría:** Interfaces pulidas que mezclan desenfoques físicos con geometría pura, logrando una estética "Vogue" en tecnología.
-3. **Escalabilidad Oculta:** Un front-end exquisito respaldado por una arquitectura de datos que el cliente no ve, pero que sostiene su negocio.
-
----
-
-## 🎯 La Trinidad (Portafolio B2B Activo)
-El ecosistema exhibe tres casos de estudio operativos que demuestran nuestra capacidad técnica en distintos sectores:
-
-1. **[El Rincón de Tetuán](https://elrincontetuan.com):** (HORECA) Digitalización B2B eliminando la fricción de los pedidos físicos con una experiencia móvil inferior a 1.5s de carga.
-2. **[Antología Poética](https://antologia.danisid.com/):** (Arte Editorial) UX inmersivo y diseño tipográfico de alto nivel para trasladar la intimidad del formato físico al lienzo digital.
-3. **[Eddy Castaño - Soundscapes](https://eddycamusic.netlify.app/):** (Management Musical) Electronic Press Kit (EPK) optimizado como máquina de conversión B2B para monetización directa y contratación.
-
----
+## 🏛️ El Ecosistema Dual
+La arquitectura de marca se divide en dos portales conectados:
+1.  **Maison Quintessence**: El brazo comercial B2B. Estética "Quiet Luxury" (OLED Black, Oro Puro, minimalismo), enfocado en clientes corporativos de alto valor (HORECA, dashboards, automatización).
+2.  **DaniSid Digital Da Vinci (`danisid.com`)**: La biografía técnica personal. Estética Zettelkasten/Cyberpunk, centrada en la narrativa del fundador, sus investigaciones (IA, Pedagogía) y su viaje profesional.
 
 ## 🛠️ Stack Tecnológico
-La agencia está construida sobre los pilares más robustos del desarrollo moderno:
-- **Framework:** React 18
-- **Build Tool:** Vite (Optimización de HMR y Bundle de Producción)
-- **Styling:** Tailwind CSS v4 + Utilidades de Glassmorphism
-- **Routing:** React Router v6 (Single Page Application - SPA)
-- **Animaciones:** Framer Motion (Micro-interacciones fluidas)
-- **Despliegue (CI/CD):** Netlify Automático (desde rama `main` en GitHub)
+*   **Framework:** React 19 + Vite
+*   **Estilos:** Tailwind CSS v4 (Arquitectura moderna basada en utilidades CSS)
+*   **Animaciones:** Framer Motion (Físicas de scroll, entradas escalonadas, microinteracciones)
+*   **Despliegue:** Netlify (CI/CD WebOps Protocol)
+
+## 🎨 Design System (El Protocolo de Excelencia)
+*   **Fondo principal:** OLED Black (`#050505`) - Reduce la fatiga visual, proyecta exclusividad y ahorra energía en pantallas modernas.
+*   **Acentos:** Oro Puro (`#D4AF37`) y Plata (`#E5E4E2`) para contrastes de alta gama.
+*   **Tipografía:** Inter (Elegancia suiza, tracking expandido para transmitir calma y estatus).
+*   **Texturas:** Glassmorphism sutil y bordes iluminados para elevar los componentes.
+
+## 💼 Casos de Estudio / Portafolio B2B
+*   **Eddy Castaño (EPK):** Arquitectura web para artistas. Embudo de conversión para bookings y *Design Engineering* "Stage Lighting Luxury". ([eddycamusic.netlify.app](https://eddycamusic.netlify.app))
+*   **El Rincón (Carta Digital):** Sistema de digitalización para sector HORECA, optimizado para cargas instantáneas y lectura en dispositivos móviles.
+
+## 🚀 Despliegue Local
+Para iniciar el entorno de desarrollo y probar la arquitectura:
+```bash
+npm install
+npm run dev
+```
 
 ---
-
-## 🚀 Despliegue e Infraestructura
-Actualmente en producción. Integración continua (CI/CD) habilitada mediante GitHub hacia **Netlify**.
-
-- **URL Producción:** `https://maison-quintessence.netlify.app/` *(Dominio definitivo pendiente de asignación)*
-- **Comando de Build local:** `npm run build`
-- **Comando de Dev:** `npm run dev`
-
----
-
-## 📜 Roadmap Inmediato
-- [x] Arquitectura Base (Vite/React)
-- [x] Identidad Visual (Logo Geométrico y Glassmorphism)
-- [x] Inyección de Proyectos B2B en vivo
-- [x] Manifiesto del Alquimista (Filosofía de marca)
-- [x] Despliegue en Producción (Netlify CI/CD)
-- [ ] **Configuración de Dominio Personalizado (.studio / .com)**
-- [ ] **Sistema CRM / Contacto (Botón "Agendar Diagnóstico")**
-
----
-*Diseñado y codificado con precisión cuántica en Madrid. © 2026 Maison Quintessence.*
+*Construido bajo estrictos protocolos de ingeniería para minimizar la entropía digital.*

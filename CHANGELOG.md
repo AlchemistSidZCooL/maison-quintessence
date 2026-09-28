@@ -35,3 +35,20 @@ Todas las actualizaciones notables de este proyecto se documentarán en este arc
 
 #### Añadido
 *   **Filosofía e Historia:** Creación del documento `FILOSOFIA_MAISON_QUINTESSENCE.md` que consolida la visión ("Quiet Luxury"), la historia, la evolución de la marca y la estrategia del ecosistema dual.
+
+## [1.1.2] - 2026-06-21
+### Consolidación del Brand Manifesto e Inteligencia Comercial
+
+#### Modificado
+*   **Manual de Identidad:** Actualización mayor del archivo `MAISON_QUINTESSENCE_MANUAL.md` para integrar el núcleo estratégico de la agencia:
+    *   **Identidad y Posicionamiento:** Definición formal del modelo *B2B High-Ticket* y el *tagline* ("Arquitectura Digital de Alto Estatus").
+    *   **Cliente Ideal:** Incorporación del perfil de cliente de alta gama y la "Regla de Oro" antimorosidad (lecciones aprendidas).
+    *   **El Arquitecto:** Integración estratégica del vínculo con `danisid.com` como el "Laboratorio de I+D", elevando la autoridad de la marca matriz.
+    *   **Servicios Core:** Definición de los tres pilares comerciales (*Digital Boutiques*, *Sistemas Interactivos* y *EPK Premium*).
+
+## [1.1.3] - 2026-09-24
+### Auditoría y Matriz Estratégica del Ecosistema
+
+#### Añadido
+*   **Inventario Maestro:** Auditoría y registro de todos los proyectos activos, en desarrollo y legacy en el ecosistema dual (Maison Quintessence y DaniSid.com).
+*   **Matriz de Distribución:** Estrategia clara para definir la ubicación de cada caso de estudio y proyecto, separando la identidad "Digital Da Vinci" (DaniSid) del portafolio comercial B2B (Maison Quintessence).
